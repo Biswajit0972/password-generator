@@ -76,3 +76,4 @@ function copyText () {
 }
 
 copyText()
+generatePassword();

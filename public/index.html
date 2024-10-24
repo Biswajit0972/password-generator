@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="max-w-screen-2x relative">
+      <div class="container relative h-screen w-full bg-primary p-5 sm:px-8">
+        <div class="text-box relative w-full text-center">
+          <h1 class="font-secondary text-white-500 font-bold text-xl py-3">
+            🚀 Free Password Generator 🚀
+          </h1>
+          <p class="text-white-500 font-semibold py-2">
+            <span class="font-extrabold text-secondary"
+              >🚀 Free Password Generator 🚀
+            </span>
+            is an open-source project where you can generate secure passwords. I
+            assure you that your password is not stored in any database. The
+            process is entirely client-side, meaning if you refresh the webpage,
+            the password you generate will be lost. So, please be careful! 💀
+          </p>
+        </div>
+        <div
+          class="flex relative w-full bg-blue items-center justify-between mt-4 sm:mt-20"
+        >
+          <div class="hidden sm:block relative sm:w-1/2 bg-red"></div>
+          <div
+            class="password-box relative w-full bg-secondary-300 rounded-md sm:w-1/2"
+          >
+            <form action="" class="w-full p-5 mt-3 form">
+              <div class="relative w-full">
+                <input
+                  type="text"
+                  name="passwordInput"
+                  class="w-full h-10 outline-none rounded-lg pl-3 font-secondary"
+                  placeholder="Password"
+                />
+                <img
+                  src="./image/copy.png"
+                  class="copy absolute h-6 right-2 top-1/2 -translate-y-1/2 inline cursor-pointer"
+                />
+              </div>
+              <div class="relative w-full flex items-center gap-2 my-2">
+                <input
+                  type="checkbox"
+                  name="alphabet"
+                  id="alphabet"
+                  checked
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600"
+                />
+                <p class="font-secondary font-bold text-white-500">
+                  Password contains Alphabets!
+                </p>
+              </div>
+              <div class="relative w-full flex items-center gap-2 my-2">
+                <input
+                  type="checkbox"
+                  name="numbers"
+                  id="numbers"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600"
+                />
+                <p class="font-secondary font-bold text-white-500">
+                  Password contains Numbers!
+                </p>
+              </div>
+              <div class="relative w-full flex items-center gap-2 my-2">
+                <input
+                  type="checkbox"
+                  name="specialCharacters"
+                  id="specialCharacters"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600"
+                />
+                <p class="font-secondary font-bold text-white-500">
+                  Password contains Special Characters!
+                </p>
+              </div>
+              <div class="w-full">
+                <label
+                  for="rangeInput"
+                  class="block text-sm font-medium text-white-500 mb-2"
+                >
+                  Select a value:
+                </label>
+                <input
+                  type="range"
+                  name="passwordLength"
+                  id="rangeInput"
+                  min="5"
+                  max="50"
+                  value="8"
+                  class="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer transition-all duration-300 ease-in-out"
+                  oninput="document.getElementById('rangeValue').innerText = this.value"
+                />
+                <div class="text-center mt-2 text-white">
+                  <span id="rangeValue">8</span>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="w-full h-8 bg-white hover:bg-secondary font-secondary mt-2 cursor-pointer rounded-md"
+              >
+                Generate Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
